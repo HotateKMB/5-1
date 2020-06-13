@@ -17,9 +17,10 @@ public class IntToEng {
 	        String[] eng0 = {"zero"};
 	        if (n==0) {
 	         return eng0[0];
-	        } else {
+	        } else if (n > 0) {
 	         return translate(n);
 	        }
+	        return "";
 
 	       }
 	       static String translate (int n) {
