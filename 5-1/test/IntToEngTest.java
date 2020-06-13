@@ -1,5 +1,6 @@
-import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class IntToEngTest {
@@ -11,7 +12,7 @@ public class IntToEngTest {
 		String actual = ite.translateEng(0);
 		assertThat(actual, is(expected));
 	}
-	
+
 	@Test
 	public void IntToEngで10を入力したらtenと帰ってくる() {
 		IntToEng ite = new IntToEng();
@@ -19,7 +20,7 @@ public class IntToEngTest {
 		String actual = ite.translateEng(10);
 		assertThat(actual, is(expected));
 	}
-	
+
 	@Test
 	public void IntToEngで100を入力したらonehundredと帰ってくる() {
 		IntToEng ite = new IntToEng();
@@ -27,7 +28,7 @@ public class IntToEngTest {
 		String actual = ite.translateEng(100);
 		assertThat(actual, is(expected));
 	}
-	
+
 	@Test
 	public void IntToEngで1000を入力したらthousandと帰ってくる() {
 		IntToEng ite = new IntToEng();
@@ -35,25 +36,25 @@ public class IntToEngTest {
 		String actual = ite.translateEng(1000);
 		assertThat(actual, is(expected));
 	}
-	
+
 	@Test
-	public void IntToEngで10000を入力したらzeroと帰ってくる() {
+	public void IntToEngで10000を入力したら英語が帰ってくる() {
 		IntToEng ite = new IntToEng();
 		String expected = "ten thousand ";
 		String actual = ite.translateEng(10000);
 		assertThat(actual, is(expected));
 	}
-	
+
 	@Test
-	public void IntToEngで100000を入力したらzeroと帰ってくる() {
+	public void IntToEngで100000を入力したら英語が帰ってくる() {
 		IntToEng ite = new IntToEng();
 		String expected = "one hundred thousand ";
 		String actual = ite.translateEng(100000);
 		assertThat(actual, is(expected));
 	}
-	
+
 	@Test
-	public void IntToEngで1000000を入力したらzeroと帰ってくる() {
+	public void IntToEngで1000000を入力したら英語が帰ってくる() {
 		IntToEng ite = new IntToEng();
 		String expected = "one million ";
 		String actual = ite.translateEng(1000000);
@@ -67,4 +68,5 @@ public class IntToEngTest {
 		String actual = ite.translateEng(2147483647);
 		assertThat(actual, is(expected));
 	}
+
 }
